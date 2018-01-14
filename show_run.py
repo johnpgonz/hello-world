@@ -34,7 +34,7 @@ with open("iosxr_list.txt") as f:
             else:
                 print "Broke out of nested while loop"
                 break
-        print "Back to regular for loop,changing stdout to print to file, brb..."
+        print "Back to regular for loop, changing stdout to print to file, brb..."
         original = sys.stdout
         sys.stdout = open(devices.rstrip("\n") + ".txt" , "w")
         print output
