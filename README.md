@@ -1,2 +1,0 @@
-# JPs-World
-first repository
