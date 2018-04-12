@@ -58,10 +58,10 @@ with open(input) as f:
                     tn.read_until("Password:" or "password:", 1)
                     tn.write(password + "\n")
                     print "Connected to " + devices.rstrip("\n")
+					c.seek(0)
                     print "Sending cmds..."
-                    tn.write(str(command1) + "\n")
-                    tn.write(str(command2) + "\n")
-                    tn.write(str(command3) + "\n")
+					for cmds in c:
+                        tn.write(str(cmds) + "\n")
                     tn.write("exit\n")
                     original = sys.stdout
                     sys.stdout = open(str(directory) + devices.rstrip("\n") + ".txt" , "a")
