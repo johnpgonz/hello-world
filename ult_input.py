@@ -58,9 +58,9 @@ with open(input) as f:
                     tn.read_until("Password:" or "password:", 1)
                     tn.write(password + "\n")
                     print "Connected to " + devices.rstrip("\n")
-					c.seek(0)
+		    c.seek(0)
                     print "Sending cmds..."
-					for cmds in c:
+		    for cmds in c:
                         tn.write(str(cmds) + "\n")
                     tn.write("exit\n")
                     original = sys.stdout
